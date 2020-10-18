@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-indent-props */
 /* eslint-disable react/jsx-indent */
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
@@ -9,7 +10,10 @@ const Routes: React.FC = () => {
         <>
             <Switch>
                 <Route path="/" exact component={Dashboard} />
-                <Route path="/repository" component={Repository} />
+                <Route
+                    path="/repositories/:repository+"
+                    component={Repository}
+                />
             </Switch>
         </>
     );
